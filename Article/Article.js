@@ -138,6 +138,11 @@ function createArticle(titleArg, dateArg, firstArg, secondArg, thirdArg){
   third.textContent= thirdArg;
   expandButton.textContent= 'expand';
 
+  expandButton.addEventListener('click', event => {
+    article.classList.toggle('article-open')
+
+  })
+
   return article;
 
 }
@@ -152,4 +157,3 @@ data.forEach( x => articles.append(createArticle(
   x.thirdParagraph
 )));
 
-// articles.append(createArticle(data[0].title))
