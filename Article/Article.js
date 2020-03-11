@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Gordon\'s first blog post!',
+    date: 'March 8, 2020',
+    firstParagraph: `This is my first paragraph, it is my favourite paragraph because it is my first. It was my second, it would probably be my second best paragraph; maybe my third, but definitely not first. How can I explain the feeling of your first paragraph? It's kind of like the feeling of the 2nd paragraph, but all that much better, you know?`,
+
+    secondParagraph: `This is my second paragraph, I'll be honest, I don't really know how I feel about it. I suppose I could try import something like ${this.title} but i'm not sure if that will work, lets check it out. All I did was type this.title but with the $ sign and some {} sets.`,
+
+    thirdParagraph: `Third paragraphs are like third children, nobody really cares about them, and their only purpose is to become the functioning alcoholics in the family who buy dumb stuff for all the kids at christmas because they have a lot of expendable income due to being alone and never having any hobbies outside of work.`
   }
 ];
 
@@ -147,7 +156,7 @@ function createArticle(titleArg, dateArg, firstArg, secondArg, thirdArg){
 
 }
 
-console.log(data[0].title)
+console.log(data[0].title+" music!")
 let articles = document.querySelector('.articles');
 data.forEach( x => articles.append(createArticle(
   x.title,
