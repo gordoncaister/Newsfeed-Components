@@ -132,6 +132,8 @@ function createArticle(titleArg, dateArg, firstArg, secondArg, thirdArg){
   let third = document.createElement('p');
   let expandButton = document.createElement('span');
   expandButton.classList.add('expandButton');
+  let hideButton = document.createElement('button');
+
 
   article.append(title);
   article.append(date);
@@ -139,6 +141,7 @@ function createArticle(titleArg, dateArg, firstArg, secondArg, thirdArg){
   article.append(second);
   article.append(third);
   article.append(expandButton);
+  article.append(hideButton)
   
   title.textContent= titleArg;
   date.textContent= dateArg;
