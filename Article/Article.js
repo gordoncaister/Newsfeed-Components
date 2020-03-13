@@ -133,6 +133,8 @@ function createArticle(titleArg, dateArg, firstArg, secondArg, thirdArg){
   let expandButton = document.createElement('span');
   expandButton.classList.add('expandButton');
   let hideButton = document.createElement('button');
+  hideButton.innerText = "Hide";
+  hideButton.addEventListener('click', event => article.style.display = "none");
 
 
   article.append(title);
