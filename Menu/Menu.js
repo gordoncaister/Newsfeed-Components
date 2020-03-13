@@ -19,6 +19,7 @@ let menuItems = [
     </ul>
   </div>
 
+
   The function takes an array as its only argument.
 
   Step 2: Inside this function, iterate over the array creating a list item <li> element for each item in the array. 
@@ -33,3 +34,25 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+function createMenu(args){
+  let menu = document.createElement('div');
+  menu.classList.add('menu');
+
+  let ul = document.createElement('ul');
+
+  menu.appendChild(ul);
+
+  args.forEach(element => {
+    let li = document.createElement('li');
+    ul.appendChild(li);
+    li.textContent = element;
+  });
+  let menuButton = document.querySelector('.menu-button')
+  menuButton.addEventListener('click', event  => menu.classList.toggle('menu--open'))
+
+  return menu;
+}
+
+let header = document.querySelector('.header');
+header.appendChild(createMenu(menuItems));
